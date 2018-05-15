@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.daniel.solarsystem.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewMainScreen"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_screen_image" />
+
+    <TextView
+        android:id="@+id/textViewMainScreenLabel"
+        android:layout_width="match_parent"
+        android:layout_height="10sp"
+        android:layout_below="@+id/imageViewMainScreen"
+        android:layout_centerHorizontal="true"
+        android:background="@color/myLabelColor"
+        android:fadingEdge="horizontal"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
+        android:text="@string/mainScreenLabel"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textStyle="italic" />
+
+    <ListView
+        android:id="@+id/planetListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewMainScreenLabel"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
