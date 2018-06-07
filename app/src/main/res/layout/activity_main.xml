@@ -9,6 +9,7 @@
         android:id="@+id/imageViewMainScreen"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:contentDescription="@string/image_view_main_screen"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/main_screen_image" />
@@ -16,14 +17,12 @@
     <TextView
         android:id="@+id/textViewMainScreenLabel"
         android:layout_width="match_parent"
-        android:layout_height="10sp"
+        android:layout_height="10dp"
         android:layout_below="@+id/imageViewMainScreen"
         android:layout_centerHorizontal="true"
-        android:background="@color/myLabelColor"
+        android:background="@color/my_label_color"
         android:fadingEdge="horizontal"
-        android:fontFamily="sans-serif"
         android:gravity="center_vertical"
-        android:text="@string/mainScreenLabel"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textStyle="italic" />

@@ -14,17 +14,18 @@ import static com.example.daniel.solarsystem.Database.planetNames;
 public class MainActivity extends AppCompatActivity{
 
     ListView planetListView;
-    ImageView imageViewMainScreen;
+    static final String PLANET_NAME = "PlanetName";
+    static final String PLANET_POSITION = "PlanetPosition";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findAllViews();
+        planetListView = findViewById(R.id.planetListView);
 
-        CustomAdapter customAdapter = new CustomAdapter(getApplicationContext());
+        PlanetsAdapter planetsAdapter = new PlanetsAdapter(getApplicationContext());
 
-        planetListView.setAdapter(customAdapter);
+        planetListView.setAdapter(planetsAdapter);
 
         planetListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -32,17 +33,11 @@ public class MainActivity extends AppCompatActivity{
 
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
 
-                intent.putExtra("PlanetName",planetNames[i]);
-                intent.putExtra("PlanetPosition",i);
+                intent.putExtra(PLANET_NAME,planetNames[i]);
+                intent.putExtra(PLANET_POSITION,i);
 
                 startActivity(intent);
             }
         });
     }
-
-    public void findAllViews(){
-        planetListView = findViewById(R.id.planetListView);
-        imageViewMainScreen = findViewById(R.id.imageViewMainScreen);
-    }
-
 }

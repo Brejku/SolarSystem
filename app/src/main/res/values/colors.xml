@@ -3,6 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303f9f</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="myLabelColor">#512DA8</color>
-    <color name="myAccentColor">#FF9800</color>
+    <color name="my_label_color">#512DA8</color>
+    <color name="my_accent_color">#FF9800</color>
 </resources>

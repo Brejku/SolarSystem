@@ -11,15 +11,11 @@ import android.widget.TextView;
 import static com.example.daniel.solarsystem.Database.planetImages;
 import static com.example.daniel.solarsystem.Database.planetNames;
 
-/**
- * Created by Brejku on 2018-04-01.
- */
-
-class CustomAdapter extends BaseAdapter {
+class PlanetsAdapter extends BaseAdapter {
 
     Context context;
 
-    public CustomAdapter(Context context) {
+    public PlanetsAdapter(Context context) {
         this.context = context;
     }
 

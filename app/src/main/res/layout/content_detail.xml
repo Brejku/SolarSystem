@@ -13,20 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="#000"
+        android:contentDescription="@string/label_planet_image"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewPlanetNameDetail"
         android:layout_width="match_parent"
-        android:layout_height="40sp"
+        android:layout_height="40dp"
         android:layout_below="@+id/imageViewPlanetDetail"
         android:layout_centerHorizontal="true"
-        android:background="@color/myLabelColor"
+        android:background="@color/my_label_color"
         android:fadingEdge="horizontal"
-        android:fontFamily="sans-serif"
         android:gravity="center_vertical"
-        android:text="@string/PlanetNameDetail"
+        android:text="@string/planet_name"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textStyle="italic"
@@ -41,12 +41,9 @@
             android:id="@+id/textViewPlanetDescription"
             android:padding="10dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textViewPlanetNameDetail"
-            android:text="@string/textViewPlanetDescription"
-            android:textSize="18dp" />
+            android:layout_height="wrap_content"
+            android:text="@string/text_view_planet_description"
+            android:textSize="18sp" />
     </ScrollView>
 
 
