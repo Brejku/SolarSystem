@@ -9,19 +9,18 @@
     tools:showIn="@layout/activity_detail">
 
     <ImageView
-        android:id="@+id/imageViewPlanetDetail"
+        android:id="@+id/image_view_planet_detail"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="#000"
-        android:contentDescription="@string/label_planet_image"
+        android:layout_height="@dimen/detail_activity_image_view_planet_detail_height"
+        android:background="@color/my_background_black"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:id="@+id/textViewPlanetNameDetail"
+        android:id="@+id/text_view_planet_name_detail"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@+id/imageViewPlanetDetail"
+        android:layout_height="@dimen/detail_activity_text_view_planet_name_detail_height"
+        android:layout_below="@+id/image_view_planet_detail"
         android:layout_centerHorizontal="true"
         android:background="@color/my_label_color"
         android:fadingEdge="horizontal"
@@ -30,20 +29,20 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_light"
         android:textStyle="italic"
-        android:textSize="18sp"/>
+        android:textSize="@dimen/detail_activity_text_view_planet_name_detail_size"/>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textViewPlanetNameDetail">
+        android:layout_below="@+id/text_view_planet_name_detail">
 
         <TextView
-            android:id="@+id/textViewPlanetDescription"
-            android:padding="10dp"
+            android:id="@+id/text_view_planet_description"
+            android:padding="@dimen/detail_activity_text_view_planet_description_padding"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/text_view_planet_description"
-            android:textSize="18sp" />
+            android:textSize="@dimen/detail_activity_text_view_planet_name_detail_size" />
     </ScrollView>
 
 

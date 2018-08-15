@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 
@@ -14,14 +13,15 @@ import static com.example.daniel.solarsystem.Database.planetNames;
 public class MainActivity extends AppCompatActivity{
 
     ListView planetListView;
-    static final String PLANET_NAME = "PlanetName";
-    static final String PLANET_POSITION = "PlanetPosition";
+    private static final String PLANET_NAME = "PlanetName";
+    private static final String PLANET_POSITION = "PlanetPosition";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        planetListView = findViewById(R.id.planetListView);
+
+        planetListView = findViewById(R.id.list_view_planet);
 
         PlanetsAdapter planetsAdapter = new PlanetsAdapter(getApplicationContext());
 
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity{
 
                 Intent intent = new Intent(MainActivity.this,DetailActivity.class);
 
-                intent.putExtra(PLANET_NAME,planetNames[i]);
-                intent.putExtra(PLANET_POSITION,i);
+                intent.putExtra(PLANET_NAME, planetNames[i]);
+                intent.putExtra(PLANET_POSITION, i);
 
                 startActivity(intent);
             }

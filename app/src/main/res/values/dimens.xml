@@ -1,3 +1,17 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="main_activity_image_view_height">200dp</dimen>
+    <dimen name="main_activity_text_view_label_height">10dp</dimen>
+
+    <dimen name="detail_activity_image_view_planet_detail_height">200dp</dimen>
+    <dimen name="detail_activity_text_view_planet_name_detail_height">40dp</dimen>
+    <dimen name="detail_activity_text_view_planet_name_detail_size">18sp</dimen>
+    <dimen name="detail_activity_text_view_planet_description_padding">10dp</dimen>
+
+    <dimen name="custom_list_row_text_view_planet_name_height">95dp</dimen>
+    <dimen name="custom_list_row_text_view_planet_name_margin_start">45dp</dimen>
+    <dimen name="custom_list_row_text_view_planet_name_margin_left">45dp</dimen>
+    <dimen name="custom_list_row_text_view_planet_name_text_size">28sp</dimen>
+    <dimen name="custom_list_row_image_view_planet_width">95dp</dimen>
+    <dimen name="custom_list_row_image_view_planet_height">95dp</dimen>
 </resources>

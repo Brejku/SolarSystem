@@ -6,19 +6,18 @@
     tools:context="com.example.daniel.solarsystem.MainActivity">
 
     <ImageView
-        android:id="@+id/imageViewMainScreen"
+        android:id="@+id/image_view_main_screen"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:contentDescription="@string/image_view_main_screen"
+        android:layout_height="@dimen/main_activity_image_view_height"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@drawable/main_screen_image" />
 
     <TextView
-        android:id="@+id/textViewMainScreenLabel"
+        android:id="@+id/text_view_main_screen_label"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_below="@+id/imageViewMainScreen"
+        android:layout_height="@dimen/main_activity_text_view_label_height"
+        android:layout_below="@+id/image_view_main_screen"
         android:layout_centerHorizontal="true"
         android:background="@color/my_label_color"
         android:fadingEdge="horizontal"
@@ -28,9 +27,9 @@
         android:textStyle="italic" />
 
     <ListView
-        android:id="@+id/planetListView"
+        android:id="@+id/list_view_planet"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/textViewMainScreenLabel"
+        android:layout_below="@+id/text_view_main_screen_label"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

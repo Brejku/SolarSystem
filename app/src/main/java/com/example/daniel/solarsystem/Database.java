@@ -9,10 +9,7 @@ public class Database {
     public static int[] planetImages = {R.drawable.mercury, R.drawable.venus, R.drawable.earth, R.drawable.mars,
             R.drawable.jupiter, R.drawable.saturn, R.drawable.uranus, R.drawable.neptune};
 
-
-
     public static String[] planetNames = {"Merkury","Wenus","Ziemia","Mars","Jowisz","Saturn","Uran","Neptun"};
-
 
     public static String[] planetInfo = {
             "Merkury – najmniejsza i najbliższa Słońcu planeta Układu Słonecznego." +
@@ -26,7 +23,6 @@ public class Database {
                     " Wielkość jądra powoduje, że Merkury ma jedną z największych gęstości spośród planet Układu Słonecznego (nieznacznie większą ma Ziemia)." +
                     " Merkury nie ma naturalnych satelitów.",
 
-
             "Wenus – druga pod względem odległości od Słońca planeta Układu Słonecznego." +
                     " Jest trzecim pod względem jasności ciałem niebieskim widocznym na niebie," +
                     " po Słońcu i Księżycu. Jej obserwowana wielkość gwiazdowa sięga −4,6m i jest wystarczająca," +
@@ -39,7 +35,6 @@ public class Database {
                     " Nieodłączna towarzyszka wschodzącego i zachodzącego Słońca," +
                     " nazywana jest także Gwiazdą Poranną, Zaranną, Porankową czyli Jutrzenką (łac. Stella Matutina)," +
                     " kiedy zwiastuje wschód Słońca, albo Gwiazdą Wieczorną, która finalizuje jego zachód.",
-
 
             "Ziemia – trzecia, licząc od Słońca, oraz piąta pod względem wielkości planeta Układu Słonecznego. " +
                     "Pod względem średnicy, masy i gęstości jest to największa planeta skalista Układu Słonecznego. " +
@@ -57,7 +52,6 @@ public class Database {
                     " Pomimo że naukowcy szacują, że ok. 99% gatunków organizmów żywych (ok. 5 mld) kiedykolwiek zamieszkujących" +
                     " Ziemię uważa się za wymarłe, wciąż mieszka na niej ok. 10–14 mln gatunków, z czego 1,2 mln zostało udokumentowanych.",
 
-
             "Mars – czwarta według oddalenia od Słońca planeta Układu Słonecznego." +
                     " Nazwa planety pochodzi od imienia rzymskiego boga wojny – Marsa." +
                     " Zawdzięcza ją swej barwie, która przy obserwacji z Ziemi wydaje się rdzawo-czerwona" +
@@ -70,7 +64,6 @@ public class Database {
                     " Gładki obszar równinny Vastitas Borealis na półkuli północnej obejmuje 40% powierzchni planety" +
                     " i może być pozostałością ogromnego uderzenia. W przeciwieństwie do Ziemi, Mars jest geologicznie i tektonicznie nieaktywny.",
 
-
             "Jowisz – piąta w kolejności oddalenia od Słońca i największa planeta Układu Słonecznego[b]." +
                     " Jego masa jest nieco mniejsza niż jedna tysięczna masy Słońca," +
                     " a zarazem dwa i pół razy większa niż łączna masa wszystkich innych planet w Układzie Słonecznym." +
@@ -81,7 +74,6 @@ public class Database {
                     " Jest to trzeci co do jasności naturalny obiekt na nocnym niebie po Księżycu i Wenus (okresowo," +
                     " w momencie wielkiej opozycji, jasnością może mu dorównywać Mars).",
 
-
             "Saturn – gazowy olbrzym, szósta planeta Układu Słonecznego pod względem odległości od Słońca," +
                     " druga po Jowiszu pod względem masy i wielkości. Charakterystyczną jego cechą są pierścienie," +
                     " składające się głównie z lodu i w mniejszej ilości z odłamków skalnych; inne planety-olbrzymy także mają systemy pierścieni," +
@@ -90,7 +82,6 @@ public class Database {
                     " Chociaż jego gęstość to tylko jedna ósma średniej gęstości Ziemi, ze względu na wielokrotnie większą objętość masa Saturna" +
                     " jest dziewięćdziesiąt pięć razy większa niż masa Ziemi.",
 
-
             "Uran − gazowy olbrzym, siódma w kolejności od Słońca planeta Układu Słonecznego." +
                     " Jest także trzecią pod względem wielkości i czwartą pod względem masy planetą naszego systemu." +
                     " Nazwa planety pochodzi od Uranosa, który był bogiem i uosobieniem nieba w mitologii greckiej (klasyczna greka: Οὐρανός)," +
@@ -98,7 +89,6 @@ public class Database {
                     " umknął uwadze starożytnych obserwatorów ze względu na niską jasność i powolny ruch po sferze niebieskiej." +
                     " Sir William Herschel ogłosił odkrycie planety w dniu 13 marca 1781, po raz pierwszy w historii nowożytnej rozszerzając znane granice Układu Słonecznego." +
                     " Uran to również pierwsza planeta odkryta przy pomocy teleskopu.",
-
 
             "Neptun – gazowy olbrzym, ósma, najdalsza od Słońca planeta w Układzie Słonecznym." +
                     " Nazwa planety pochodzi od rzymskiego boga mórz Neptuna." +
@@ -117,8 +107,6 @@ public class Database {
                     " która przeleciała w pobliżu planety 25 sierpnia 1989 roku."
     };
 
-
-
     public static String[] planetLink = {
             "https://pl.wikipedia.org/wiki/Merkury",
             "https://pl.wikipedia.org/wiki/Wenus",
@@ -129,6 +117,4 @@ public class Database {
             "https://pl.wikipedia.org/wiki/Uran",
             "https://pl.wikipedia.org/wiki/Neptun"
     };
-
-
 }

@@ -14,7 +14,6 @@ import static com.example.daniel.solarsystem.Database.planetImages;
 import static com.example.daniel.solarsystem.Database.planetInfo;
 import static com.example.daniel.solarsystem.Database.planetLink;
 
-
 public class DetailActivity extends AppCompatActivity{
 
     ImageView planetImage;
@@ -22,51 +21,38 @@ public class DetailActivity extends AppCompatActivity{
     int position = 0;
     Drawable drawable;
 
-
-    public void findAllViews(){
-
-        planetName = findViewById(R.id.textViewPlanetNameDetail);
-        planetDescription = findViewById(R.id.textViewPlanetDescription);
-        planetImage = findViewById(R.id.imageViewPlanetDetail);
-
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        findAllViews();
-
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
 
+            planetName = findViewById(R.id.text_view_planet_name_detail);
             planetName.setText(bundle.getString("PlanetName"));
+
             position = bundle.getInt("PlanetPosition");
-
             drawable = getResources().getDrawable(planetImages[position]);
-            planetImage.setImageDrawable(drawable);
-            planetDescription.setText(planetInfo[position]);
 
+            planetImage = findViewById(R.id.image_view_planet_detail);
+            planetImage.setImageDrawable(drawable);
+
+            planetDescription = findViewById(R.id.text_view_planet_description);
+            planetDescription.setText(planetInfo[position]);
         }
 
+        FloatingActionButton fab = findViewById(R.id.fab);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String url = planetLink[position];
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);
             }
         });
-
-
     }
-
-
-
-
 }

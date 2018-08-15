@@ -15,7 +15,7 @@ class PlanetsAdapter extends BaseAdapter {
 
     Context context;
 
-    public PlanetsAdapter(Context context) {
+    PlanetsAdapter(Context context) {
         this.context = context;
     }
 
@@ -38,9 +38,9 @@ class PlanetsAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         view = LayoutInflater.from(context).inflate(R.layout.custom_list_row,null);
 
-        ImageView imageView = view.findViewById(R.id.imageViewPlanet);
+        ImageView imageView = view.findViewById(R.id.image_view_planet);
 
-        TextView textViewName = view.findViewById(R.id.textViewPlanetName);
+        TextView textViewName = view.findViewById(R.id.text_view_planet_name);
 
         imageView.setImageResource(planetImages[i]);
         textViewName.setText(planetNames[i]);
