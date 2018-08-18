@@ -10,36 +10,38 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.example.daniel.solarsystem.Database.planetImages;
-import static com.example.daniel.solarsystem.Database.planetInfo;
-import static com.example.daniel.solarsystem.Database.planetLink;
 
 public class DetailActivity extends AppCompatActivity{
 
-    ImageView planetImage;
-    TextView planetName,planetDescription;
-    int position = 0;
-    Drawable drawable;
+    private ImageView planetImage;
+    private TextView planetName,planetDescription;
+    private String PLANET_POSITION = "position";
+    private int chosenPlanetPosition;
+    private Database database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        database = new Database(getApplicationContext());
+
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
 
-            planetName = findViewById(R.id.text_view_planet_name_detail);
-            planetName.setText(bundle.getString("PlanetName"));
+            chosenPlanetPosition = bundle.getInt(PLANET_POSITION);
 
-            position = bundle.getInt("PlanetPosition");
-            drawable = getResources().getDrawable(planetImages[position]);
+            planetName = findViewById(R.id.text_view_planet_name_detail);
+            planetName.setText(database.getPlanetAtIndex(chosenPlanetPosition).getName());
+
+            Drawable drawable;
+            drawable = getResources().getDrawable(database.getPlanetAtIndex(chosenPlanetPosition).getImage());
 
             planetImage = findViewById(R.id.image_view_planet_detail);
             planetImage.setImageDrawable(drawable);
 
             planetDescription = findViewById(R.id.text_view_planet_description);
-            planetDescription.setText(planetInfo[position]);
+           planetDescription.setText(database.getPlanetAtIndex(chosenPlanetPosition).getDescription());
         }
 
         FloatingActionButton fab = findViewById(R.id.fab);
@@ -48,7 +50,7 @@ public class DetailActivity extends AppCompatActivity{
             @Override
             public void onClick(View view) {
 
-                String url = planetLink[position];
+                String url = database.getPlanetAtIndex(chosenPlanetPosition).getLink();
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
                 startActivity(i);

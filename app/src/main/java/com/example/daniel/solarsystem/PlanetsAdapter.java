@@ -4,47 +4,41 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.example.daniel.solarsystem.Database.planetImages;
-import static com.example.daniel.solarsystem.Database.planetNames;
+import java.util.ArrayList;
 
-class PlanetsAdapter extends BaseAdapter {
+public class PlanetsAdapter extends ArrayAdapter<Planet>{
 
-    Context context;
-
-    PlanetsAdapter(Context context) {
-        this.context = context;
+    public PlanetsAdapter(Context context, ArrayList<Planet> planets) {
+        super(context, 0, planets);
     }
 
     @Override
-    public int getCount() {
-        return planetImages.length;
-    }
+    public View getView(int i, View convertView, ViewGroup viewGroup) {
 
-    @Override
-    public Object getItem(int i) {
-        return null;
-    }
+        Database database = new Database(getContext());
 
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
+        // Get the data item for this position
+        Planet planet = getItem(i);
 
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        view = LayoutInflater.from(context).inflate(R.layout.custom_list_row,null);
+        // Check if an existing view is being reused, otherwise inflate the view
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.custom_list_row, viewGroup, false);
+        }
+        // Lookup view for data population
+        TextView plName = convertView.findViewById(R.id.text_view_planet_name);
+        ImageView plImg = convertView.findViewById(R.id.image_view_planet);
 
-        ImageView imageView = view.findViewById(R.id.image_view_planet);
+        // Populate the data into the template view using the data object
+        plName.setText(database.getPlanetAtIndex(i+1).getName());
+        plImg.setImageResource(database.getPlanetAtIndex(i+1).getImage());
 
-        TextView textViewName = view.findViewById(R.id.text_view_planet_name);
+        database.closeDb();
 
-        imageView.setImageResource(planetImages[i]);
-        textViewName.setText(planetNames[i]);
-
-        return view;
+        // Return the completed view to render on screen
+        return convertView;
     }
 }
