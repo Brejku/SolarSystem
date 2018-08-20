@@ -1,6 +1,7 @@
 package com.example.daniel.solarsystem;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,8 +34,14 @@ public class PlanetsAdapter extends ArrayAdapter<Planet>{
         ImageView plImg = convertView.findViewById(R.id.image_view_planet);
 
         // Populate the data into the template view using the data object
-        plName.setText(database.getPlanetAtIndex(i+1).getName());
-        plImg.setImageResource(database.getPlanetAtIndex(i+1).getImage());
+        try {
+            plName.setText(database.getPlanetAtIndex(i+1).getName());
+            plImg.setImageResource(database.getPlanetAtIndex(i+1).getImage());
+        }catch (Exception e){
+            e.printStackTrace();
+            Log.i("DB-Info", "Database is empty! - Adapter");
+        }
+
 
         database.closeDb();
 

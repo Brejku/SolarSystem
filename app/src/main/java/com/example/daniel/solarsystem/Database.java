@@ -20,7 +20,7 @@ public class Database{
      private final static String PLANET_IMG="image";  // image of planet
      private final static String PLANET_DESC="description";  // description of planet
      private final static String PLANET_LINK="link";  // link of planet
-     public Planet planet;
+     private Planet planet;
 
     public Database(Context context){
         dbHelper = new DatabaseOpenHelper(context);
